@@ -6,6 +6,7 @@
     <title>Mon Portfolio</title>
     <link href="./src/output.css" rel="stylesheet" />
     <link href="./src/styles.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-[#16181D] overflow-x-hidden">
     <!-- Header -->
@@ -100,7 +101,7 @@
           <a
             href="#contact"
             class="block text-white text-base font-medium px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
-            >Contact</a px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150
+            >Contact</a
           >
         </div>
       </nav>
@@ -111,7 +112,11 @@
       id="home"
       class="bg-[url('../public/images/home.png')] bg-cover bg-center w-full h-fit flex justify-center py-12 mt-14 font-poppins flex-col space-y-6 items-center text-center"
     >
-      <div>
+      <div
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+      >
         <img
           class="lg:size-50 size-36 bg-gradient-to-l from-purple-400 to-orange-400/80 rounded-full flex items-center justify-center"
           src="./public/images/Avatar.png"
@@ -119,20 +124,26 @@
         />
       </div>
       <div class="lg:text-5xl text-2xl text-white font-bold space-y-2">
-        <h2>I'm Mahery,</h2>
+        <h2 data-aos="fade" data-aos-duration="400">I'm Mahery,</h2>
         <h2
+          data-aos="fade"
+          data-aos-duration="400"
           class="bg-gradient-to-l from-purple-400 to-orange-400/80 bg-clip-text text-transparent"
         >
           Junior Web Developer.
         </h2>
       </div>
-      <p class="text-slate-200/50 text-xl font-semibold lg:w-1/2 px-6 w-full">
+      <p
+        data-aos="fade"
+        data-aos-duration="600"
+        class="text-slate-200/50 text-xl font-semibold lg:w-1/2 px-6 w-full"
+      >
         As a junior developer, I focus on creating modern and effective
         solutions while continuously learning and adapting to new technologies.
         My goal is to grow professionally by applying the latest industry
         practices and expanding my skill set.
       </p>
-      <div class="space-x-4">
+      <div data-aos="fade" data-aos-duration="800" class="space-x-4">
         <button
           class="text-white py-2 px-4 border border-white rounded-3xl duration-200 hover:bg-white hover:text-slate-900 font-semibold"
         >
@@ -148,6 +159,8 @@
 
     <!-- section stack tech -->
     <section
+      data-aos="fade"
+      data-aos-duration="400"
       id="tech"
       class="w-full h-fit flex flex-col justify-center items-center py-20 space-y-10 px-4"
     >
@@ -249,11 +262,27 @@
       class="w-full h-fit flex flex-col items-center py-10 space-y-16"
     >
       <div class="flex flex-col font-inconsolata space-y-4 text-center">
-        <h2 class="text-4xl text-[#E3646E] font-bold">My Projects</h2>
-        <h3 class="text-white text-2xl font-bold">See the featured projects</h3>
+        <h2
+          data-aos="fade"
+          data-aos-duration="400"
+          class="text-4xl text-[#E3646E] font-bold"
+        >
+          My Projects
+        </h2>
+        <h3
+          data-aos="fade"
+          data-aos-duration="600"
+          class="text-white text-2xl font-bold"
+        >
+          See the featured projects
+        </h3>
       </div>
       <div class="flex flex-wrap justify-center gap-6 max-w-6xl px-2">
-        <div class="w-80 h-76 bg-gray p-4 space-y-8 rounded-xl">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="800"
+          class="w-80 h-76 bg-gray p-4 space-y-8 rounded-xl"
+        >
           <div class="h-1/2 w-full bg-gray-400 rounded-lg overflow-hidden">
             <img
               src="./public/images/backoffice.jpg"
@@ -271,7 +300,11 @@
             </p>
           </div>
         </div>
-        <div class="w-80 h-76 bg-gray p-4 space-y-8 rounded-xl">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="800"
+          class="w-80 h-76 bg-gray p-4 space-y-8 rounded-xl"
+        >
           <div class="h-1/2 w-full bg-gray-400 rounded-lg overflow-hidden">
             <img
               src="./public/images/landing.jpg"
@@ -298,12 +331,14 @@
       class="w-full h-fit py-10 space-y-6 flex flex-col items-center"
     >
       <h2
+        data-aos="fade"
+        data-aos-duration="400"
         class="font-extrabold text-4xl bg-gradient-to-b from-blue-500 to-blue-900 bg-clip-text text-transparent"
       >
         Experience
       </h2>
       <div class="lg:w-1/2 w-full px-2 space-y-4">
-        <div class="space-y-4 p-6">
+        <div data-aos="fade" data-aos-duration="800" class="space-y-4 p-6">
           <div class="flex lg:flex-row flex-col space-y-2 lg:justify-between">
             <h3 class="text-white font-bold text-xl">
               SPAT – Stage de trois mois
@@ -327,15 +362,33 @@
       class="bg-[url('../public/images/footer.png')] bg-cover bg-center w-full h-fit py-10 space-y-6 flex flex-col items-center"
     >
       <div class="text-center space-y-2">
-        <h2 class="text-4xl font-inconsolata font-semibold text-[#BB72E9]">
+        <h2
+          data-aos="fade"
+          data-aos-duration="300"
+          class="text-4xl font-inconsolata font-semibold text-[#BB72E9]"
+        >
           Contact
         </h2>
-        <p class="text-white text-2xl font-bold">Did you like my work?</p>
-        <p class="text-white/40 text-lg">
+        <p
+          data-aos="fade"
+          data-aos-duration="400"
+          class="text-white text-2xl font-bold"
+        >
+          Did you like my work?
+        </p>
+        <p
+          data-aos="fade"
+          data-aos-duration="600"
+          class="text-white/40 text-lg"
+        >
           Get in touch or follow me on my social media!
         </p>
       </div>
-      <div class="space-y-4 px-10 sm:w-96 w-full">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="800"
+        class="space-y-4 px-10 sm:w-96 w-full"
+      >
         <div
           class="flex justify-between items-center h-16 px-6 bg-gray rounded-lg"
         >
@@ -486,6 +539,11 @@
       </div>
     </section>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
     <script src="./src/app.js"></script>
   </body>
 </html>
