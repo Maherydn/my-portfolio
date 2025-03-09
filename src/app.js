@@ -9,8 +9,6 @@ const menuToggle = document.getElementById("menu-toggle");
         const header = document.getElementById("header");
         const scroll = window.scrollY;
 
-        console.log(scroll);
-
         if (scroll > 0) {
           header.classList.remove("h-24");
           header.classList.add("h-14");
@@ -20,7 +18,7 @@ const menuToggle = document.getElementById("menu-toggle");
         }
       });
 
-      AOS.init();
+      
       function downloadCV() {
         const link = document.createElement("a");
         link.href = "./public/CV.pdf";
