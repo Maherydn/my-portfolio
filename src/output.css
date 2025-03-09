@@ -8,6 +8,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-600: oklch(0.577 0.245 27.325);
     --color-orange-400: oklch(0.75 0.183 55.934);
     --color-blue-500: oklch(0.623 0.214 259.815);
     --color-blue-900: oklch(0.379 0.146 265.522);
@@ -16,6 +17,7 @@
     --color-slate-400: oklch(0.704 0.04 256.788);
     --color-slate-900: oklch(0.208 0.042 265.755);
     --color-gray-400: oklch(0.707 0.022 261.325);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-6xl: 72rem;
@@ -229,6 +231,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .size-3 {
     width: calc(var(--spacing) * 3);
     height: calc(var(--spacing) * 3);
@@ -244,6 +249,9 @@
   .size-full {
     width: 100%;
     height: 100%;
+  }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
   }
   .h-1\/2 {
     height: calc(1/2 * 100%);
@@ -272,8 +280,14 @@
   .h-full {
     height: 100%;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
   }
   .w-4\/5 {
     width: calc(4/5 * 100%);
@@ -293,14 +307,26 @@
   .w-full {
     width: 100%;
   }
+  .w-screen {
+    width: 100vw;
+  }
   .max-w-6xl {
     max-width: var(--container-6xl);
+  }
+  .flex-grow {
+    flex-grow: 1;
   }
   .grow {
     flex-grow: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -323,8 +349,17 @@
   .justify-end {
     justify-content: flex-end;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   .space-y-1 {
     :where(& > :not(:last-child)) {
@@ -420,11 +455,17 @@
   .bg-\[\#222222\]\/90 {
     background-color: color-mix(in oklab, #222222 90%, transparent);
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-gray {
     background-color: var(--color-gray);
   }
   .bg-gray-400 {
     background-color: var(--color-gray-400);
+  }
+  .bg-red-600 {
+    background-color: var(--color-red-600);
   }
   .bg-slate-400 {
     background-color: var(--color-slate-400);
@@ -441,11 +482,11 @@
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\'\.\.\/public\/images\/footer\.png\'\)\] {
-    background-image: url('../public/images/footer.png');
+  .bg-\[url\(\'\.\/images\/footer\.png\'\)\] {
+    background-image: url('./images/footer.png');
   }
-  .bg-\[url\(\'\.\.\/public\/images\/home\.png\'\)\] {
-    background-image: url('../public/images/home.png');
+  .bg-\[url\(\.\/images\/home\.png\)\] {
+    background-image: url(./images/home.png);
   }
   .from-blue-500 {
     --tw-gradient-from: var(--color-blue-500);
@@ -465,6 +506,10 @@
   }
   .to-gray-400 {
     --tw-gradient-to: var(--color-gray-400);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-orange-400 {
+    --tw-gradient-to: var(--color-orange-400);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-orange-400\/80 {
@@ -583,6 +628,9 @@
   .text-\[\#E3646E\] {
     color: #E3646E;
   }
+  .text-slate-200 {
+    color: var(--color-slate-200);
+  }
   .text-slate-200\/50 {
     color: color-mix(in oklab, var(--color-slate-200) 50%, transparent);
   }
@@ -606,6 +654,13 @@
   }
   .text-white\/95 {
     color: color-mix(in oklab, var(--color-white) 95%, transparent);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -781,6 +836,11 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
