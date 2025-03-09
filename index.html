@@ -4,22 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mon Portfolio</title>
-    <link href="../src/output.css" rel="stylesheet" />
-    <style>
-      /* Animation CSS */
-      @keyframes scroll-left {
-        from {
-          transform: translateX(100%);
-        }
-        to {
-          transform: translateX(-100%);
-        }
-      }
-
-      .scroll-content {
-        animation: scroll-left 10s linear infinite;
-      }
-    </style>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="./src/styles.css" rel="stylesheet" />
   </head>
   <body class="bg-[#16181D] overflow-x-hidden">
     <!-- Header -->
@@ -61,10 +47,34 @@
           <ul
             class="flex flex-row items-center justify-between h-full w-4/5 text-md font-semibold text-white"
           >
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experiences">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a
+                class="px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
+                href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
+                href="#experiences"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -74,23 +84,23 @@
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a
             href="#home"
-            class="text-slate-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            class="block text-white text-base font-medium px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
             >Accueil</a
           >
           <a
             href="#projects"
-            class="text-slate-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            class="block text-white text-base font-medium px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
             >Projects</a
           >
           <a
             href="#experiences"
-            class="text-slate-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            class="block text-white text-base font-medium px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
             >Experiences</a
           >
           <a
             href="#contact"
-            class="text-slate-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >Contact</a
+            class="block text-white text-base font-medium px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
+            >Contact</a px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150
           >
         </div>
       </nav>
@@ -476,36 +486,6 @@
       </div>
     </section>
 
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      window.addEventListener("scroll", () => {
-        const header = document.getElementById("header");
-        const scroll = window.scrollY;
-
-        console.log(scroll);
-
-        if (scroll > 0) {
-          header.classList.remove("h-24");
-          header.classList.add("h-14");
-        } else {
-          header.classList.remove("h-14");
-          header.classList.add("h-24");
-        }
-      });
-
-      AOS.init();
-      function downloadCV() {
-        const link = document.createElement("a");
-        link.href = "./public/CV.pdf";
-        link.download = "CV.pdf";
-        link.click();
-      }
-    </script>
+    <script src="./src/app.js"></script>
   </body>
 </html>

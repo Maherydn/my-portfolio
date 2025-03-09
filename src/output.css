@@ -1533,6 +1533,9 @@
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -1736,6 +1739,9 @@
   }
   .text-slate-600 {
     color: var(--color-slate-600);
+  }
+  .text-slate-900 {
+    color: var(--color-slate-900);
   }
   .text-transparent {
     color: transparent;
@@ -2039,6 +2045,10 @@
   }
   .transition-normal {
     transition-behavior: normal;
+  }
+  .duration-150 {
+    --tw-duration: 150ms;
+    transition-duration: 150ms;
   }
   .duration-200 {
     --tw-duration: 200ms;
