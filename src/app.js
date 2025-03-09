@@ -21,7 +21,7 @@ const menuToggle = document.getElementById("menu-toggle");
       
       function downloadCV() {
         const link = document.createElement("a");
-        link.href = "./public/CV.pdf";
+        link.href = "./CV.pdf";
         link.download = "CV.pdf";
         link.click();
       }
