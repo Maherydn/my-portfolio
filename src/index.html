@@ -8,8 +8,8 @@
     <link href="./styles.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-  <body class="w-full h-full bg-home bg-center ">
-    <main class="overflow-hidden w-full ">
+  <body class="w-full h-full bg-home bg-center">
+    <main class="overflow-hidden w-full">
       <!-- Header -->
       <header
         id="header"
@@ -18,7 +18,7 @@
         <div class="flex h-full">
           <div class="w-1/2 flex items-center justify-center text-white">
             <h6
-              class="lg:text-2xl font-bold text-xl bg-gradient-to-r from-gray to-gray-400 bg-clip-text text-transparent"
+              class="lg:text-2xl font-bold text-xl bg-gradient-to-l from-purple-400 to-orange-400/80 bg-clip-text text-transparent"
             >
               &lt/&gtMahdev
             </h6>
@@ -51,11 +51,13 @@
             >
               <li>
                 <a
-                  class="px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
                   href="#home"
-                  >Home</a
+                  class="flex items-center px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
                 >
+                  Home
+                </a>
               </li>
+
               <li>
                 <a
                   class="px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 duration-150"
@@ -145,10 +147,10 @@
           industry practices and expanding my skill set.
         </p>
         <div data-aos="fade-up" data-aos-duration="1000" class="flex gap-4">
-          <button
+          <a href="#contact"
             class="text-white py-2 px-4 border border-white rounded-3xl duration-200 hover:bg-white hover:text-slate-900 font-semibold"
           >
-            Get In Touch</button
+            Get In Touch</a
           ><button
             class="text-white py-2 px-4 border border-white rounded-3xl duration-200 hover:bg-white hover:text-slate-900 font-semibold"
             onclick="downloadCV()"
@@ -402,7 +404,7 @@
       <!-- section Contact -->
       <section
         id="contact"
-        class=" w-full h-fit py-10 space-y-6 flex flex-col items-center bg-[#16181D]"
+        class="w-full h-fit py-10 space-y-6 flex flex-col items-center bg-[#16181D]"
       >
         <div class="text-center space-y-2">
           <h2

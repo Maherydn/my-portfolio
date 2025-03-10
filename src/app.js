@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
 
 function downloadCV() {
   const link = document.createElement("a");
-  link.href = "./CV.pdf";
+  link.href = "./images/CV.pdf";
   link.download = "CV.pdf";
   link.click();
 }
