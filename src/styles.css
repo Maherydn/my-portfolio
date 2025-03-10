@@ -10,3 +10,10 @@
 .scroll-content {
   animation: scroll-left 10s linear infinite;
 }
+
+.bg-home {
+  background-image: url('./images/fond4.jpg');
+
+  background-attachment: fixed;
+  background-size: cover; 
+}
